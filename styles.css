@@ -22,10 +22,10 @@ body {
 .carousel {
 	width: 100%;
 	overflow: auto;
-	/* margin: 3em auto 0; */
 	display: flex;
 	gap: 1em;
 	padding: 2rem 0;
+	scroll-padding: 0 0.8rem;
 	scroll-behavior: smooth;
 	anchor-name: --carousel;
 	scroll-snap-type: x mandatory;
@@ -103,11 +103,18 @@ body {
 	text-align: center;
 	align-content: center;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 .card:hover {
 	transform: scale(1.08) translateY(-0.2em);
+	margin: 0 0.8rem;
+}
+.card:first-child {
+	margin-left: 0.8rem;
+}
+.card:last-child {
+	margin-right: 0.8rem;
 }
 
 .card img {
